@@ -1,0 +1,183 @@
+/************ Styles for the entire page ************/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    min-height: 100vh;
+}
+
+/************      Header      ************/
+.header {
+    background-color: #444;
+    color: #fff;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0px; /* Spazio per la sidebar */
+    padding-left: 20px;
+    height: 60px; /* Altezza fissa per l'header */
+    position: fixed; /* Rende l'header fisso in cima alla pagina */
+    top: 0;
+    right: 0;
+    left: 0px; /* Fa partire l'header dopo la sidebar */
+    z-index: 999;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+.menu-button {
+    color: #fff;
+    padding: 0px;
+    border-radius: 10%;
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+	width: 125px;
+    height: 50px;
+}
+
+.menu-button:hover {
+    background-color: #000;
+}
+
+.menu-button.active {
+    background-color: #000;
+}
+
+.menu-button-text {
+    position: relative;
+    top: 0px;
+    padding: 20px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 50px;
+	width: 125px;
+    background-color: #666;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    border-radius: 0px;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.dropdown-menu ul li {
+    padding: 10px;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.dropdown-menu ul li:hover {
+    background-color: #444;
+}
+
+/*********** Sidebar Styles ***********/
+.sidebar {
+    background-color: #000000;
+    width: 200px;
+    padding: 0px;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 3px;
+    margin: 0;
+}
+
+.menu-item {
+    color: #ccc;
+    padding: 10px 35px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    height: 35px;
+    border-left: 5px solid #2b2b2b; /* Black */
+/*    background-color: #333;*/
+}
+
+.menu-item:hover {
+    color: #fff;
+}
+
+
+.menu-item .icon {
+    margin-right: 10px;
+}
+
+.menu-item.active {
+    background-color: #444;
+    color: #fff;
+    border-left: 5px solid #f97316; /* Arancione */
+}
+
+.submenu {
+    list-style-type: none;
+/*    padding-left: 20px;*/
+    margin: 0;
+    display: none; /* Mostra sempre il sottomenu se l'elemento è attivo */
+    background-color: #292929;
+}
+
+.submenu-item {
+    color: #aaa;
+	top: 15px;
+	padding: 30px 35px;
+    cursor: pointer;
+    position: relative;
+    height: 45px;
+    top: 15px;
+    left: 50px;
+
+    display: block;
+}
+
+.submenu-item:hover {
+    color: #fff;
+}
+
+.submenu-item.active {
+    color: #fff;
+/*    background-color: #444;*/
+}
+
+
+/************ Main Content ************/
+.main-container {
+    margin-left: 200px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.content {
+    padding: 20px;
+/*    background-color: #444;*/
+    flex: 1;
+}
+
+/************    Footer    ************/
+.footer {
+    background-color: #292929;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%; /* Si estende fino al bordo destro della pagina */
+}

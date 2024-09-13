@@ -1,0 +1,67 @@
+crea codice per la seguente interfaccia:
+la struttura di base dei file (se necessario aggiungere qualcosa fammelo sapere)
+
+|_css
+	|_styles.css
+|_js
+	|_scripts.js
+|_include
+	|_db.php
+index.php
+
+Per le classi CSS, dettaglia nel codice fornito, con l'aggiunta di stili in base al design descritto di seguito.
+nel CSS descrivi le sezioni di codice.
+nel codice HTML predisponi i tag CSS per ogni oggetto/sezione/div, anche se non necessariamente definito nel CSS.
+
+INFORMAZIONI GENERALI
+LA schermata presenta una barra di intestazione orizzontale in alto che occupa tutta la dimensione della pagina, una barra dei menu sulla sinistra che inizia subito sotto la barra di intestazione e il contenuto dinamico che cambia a seconda della voce di menu cliccata nel resto della pagina.
+Il contenuto dinamico del body (sulla destra del menu e sotto la barra di intestazione in alto) manterrà un footer sempre uguale che rimarrà anch'esso sulla destra della barra di menu.
+
+In generale i colori di sfondo saranno in modalità di contrasto scuro.
+i pulsanti devono essere di colore arancione.
+
+La barra in alto, di sfondo colore grigio con tonalità chiara, presenta sulla sinistra un logo e sulla destra un pulsante con un menu di navigazione che appare al click e sparisce quando si clicca sul pulsante stesso o in qualsiaasi altro punto della pagina. il testo sarà in bianco. il pulsante del menu sarà di fatto un box e il menu sarà per uniformità, della stessa larghezza del pulsante. Il menu conterrà voci per profilo, impostazioni, logout.
+
+la barra sulla sinistra, di colore di sfondo nero, con testo bianco, avrà un elenco di voci con il testo in grigio che al passaggio del mouse diventa bianco. Ogni voce di menù ha sulla sinistra del testo, una piccola icona che lo rappresenta. La barra di sinistra, partendo da dove finisce la barra di intestazione, occuperà tutta la lunghezza della pagina.
+
+Il body (sulla destra del menu e sotto la barra di intestazione in alto) di sfondo  grigio con tonalità che sta tra quella del grigio chiaro dell'intestazione e il nero della barra laterale, presenterà il contenuto delle informazioni in base al menu cliccato sulla barra sinistra.
+
+I bordi dei pulsanti saranno tutti con arrotondamento degli angoli.
+
+Il colore delle icone deve essere dello stesso colore del testo e seguirà la colorazione di hover eventualmente indicata.
+
+COMPORTAMENTO DELLE VOCI DI MENU DELLA BARRA DI SINISTRA
+Nel caso in cui la voce di menu abbia delle voci sottomenu, il sottomenu rimarrà aperto per tutto l'utilizzo delle voci di sottomenu.
+il click su una voce principale di menu di sinistra farà chiudere le voci di sottomenu aperte di altre voci di menu eventualmente aperte. 
+Se cliccata una qualsiasi voce di un sottomenu non chiuderà il sottomenu stesso.
+
+CONTENUTI:
+Per ora i menu della barra di sinistra saranno Dashboard, Servizi, Persone.
+
+DASHBOARD
+La prima voce di menu della barra sinistra è la Home o meglio la dashboard che presenta il titolo e sotto il titolo due box affiancati, il box sulla sinistra con i dettagli dell'utente collegato, il box sulla destra con l'elenco degli eventi programmati o richieste di partecipazione ad un evento. Il contenuto verrà popolato dinamicamente con js.
+
+SERVIZI
+La seconda voce di menu della barra sinistra è Servizi. Il click sulla voce servizi aprirà un sottomenu (Servizi, Tipi Servizi, Schedulazione) che comprenderà automaticamente la prima voce di sottomenu . 
+La sezione servizi quindi mostrerà in alto il titolo Servizi, sotto il titolo, due pulsanti (Crea Servizio, Mostra precedenti), sotto i due pulsanti, due blocchi affiancati. Il primo blocco sulla sinistra mostrerà l'elenco dei servizi, il secondo blocco sulla destra mostrerà l'elenco delle date programmate per quel servizio. i colori di sfondo sarà grigio chiaro e testo bianco. Il contenuto verrà dinamicamente popolato con js.
+
+La Sezione Tipi servizi, mostrerà in alto il titolo (Tipi Servizio) sbandierato a sinistra e più piccolo subito sopra, la possibilità di tornare ai Servizi.
+sotto il titolo, ci sarà un box grigio che conterrà un box nero con l'elenco dei servizi e sotto, un box con un pulsante grigio per creare e aggiungere un nuovo servizio.
+i servizi creati saranno in box separati con il pulsante, che  occupano la larchezza orizzonale. Il box con il servizio creato avrà il nome del servizio sbandierato a sinistra e il pulsante per modificarlo sulla destra.
+
+la voce Schedulazione mostrera:
+in alto il titolo (Schedulazione) sbandierato a sinistra e più piccolo subito sopra, e più piccolo subito sopra, la possibilità di tornare ai Servizi.
+Sotto il titolo, due pulsanti (Nuova, Mostra)
+Sotto i pulsanti ci sono due blocchi in colonna.
+il primo blocco definisce l'intestazione del secondo blocco
+il contenuto verrà popolato dinamicamente e sarà di fatto una tabella con le date e l'elenco delle persone coinvolte in quella data.
+
+PERSONE
+La terza voce generale del menu (le precedenti erano Dashboard e Servizi), sarà Persone. 
+Il click sulla voce Persone aprirà un sottomenu (Persone, ruoli) che attiverà automaticamente la prima voce di sottomenu.
+
+La sezione persone quindi mostrerà in alto il titolo Persone, sotto il titolo, un pulsante Aggiungi Persona, sotto il pulsante, un campo di ricerca delle persone per nome, sotto la ricerca, due blocchi affiancati sinistra e destra. Il primo blocco sulla sinistra mostrerà l'elenco dei gruppi, il secondo blocco sulla destra mostrerà l'elenco delle persone per quel gruppo. i colori di sfondo sarà grigio chiaro e testo bianco. Il contenuto verrà dinamicamente popolato con js.
+La Sezione Ruoli, mostrerà in alto il titolo (Ruoli) sbandierato a sinistra e più piccolo subito sopra, la possibilità di tornare a Persone.
+sotto il titolo, due blocchi affiancati. Il primo blocco sulla sinistra mostrerà elencati i pulsanti con l'elenco dei gruppi e il pulsante per creare un nuovo gruppo, il secondo blocco sulla destra mostrerà il titolo del gruppo con un pulsantino per editare il nome, e subito sotto, l'elenco dei ruoli per quel gruppo. Ogni ruolo sarà un blocco nero con sbandierato a sinistra il nome e sbandierato a destra il pulsantino per editare il nome.
+i colori di sfondo sarà grigio con tonalità che contrastino i vari box e testo sempre bianco. Il contenuto verrà dinamicamente popolato con js.
+
