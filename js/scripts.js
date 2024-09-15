@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Salva l'ultima sezione visitata
 	function saveLastVisitedSection(section) {
     localStorage.setItem('lastVisitedSection', section);
-}
+	}
 
     // Toggle dropdown menu
     menuButton.addEventListener('click', function() {
