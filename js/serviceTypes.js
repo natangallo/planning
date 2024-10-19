@@ -75,7 +75,7 @@ function loadServiceTypes() {
                 openTypesPopup('Aggiungi Tipo Servizio');
             });
         })
-        .catch(error => console.error('Errore nel caricamento dei tipi di servizi:', error));
+        //	.catch(error => console.error('Errore nel caricamento dei tipi di servizi:', error));
 }
 
 // Funzione per aprire il popup
@@ -135,4 +135,4 @@ function openTypesPopup(title, name = '', id = null) {
 }
 
 // Carica tipi di servizi all'avvio
-loadServiceTypes();
+// loadServiceTypes();

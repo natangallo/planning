@@ -1,4 +1,6 @@
 <?php
+// File: Index.php
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -16,54 +18,17 @@ error_reporting(E_ALL);
 
 </head>
 <body>
-    
 	<script src="js/services.js"></script>
     <script src="js/serviceTypes.js"></script>
     <script src="js/dashboard.js"></script>
     <script src="js/people.js"></script>
-<!--
-    <script src="js/content.js"</script>    
--->
     <script src="js/scripts.js"></script>
 
     <!-- Header -->
-    <header class="header">
-        <div class="logo-box">
-        	<div class="logo">"YourName" Planning</div>
-        </div>
-
-        <div class="menu-button" id="menuButton">
-        	<div class="menu-button-text">
-        		Menu
-        	</div>
-        </div>
-        
-        <div class="dropdown-menu" id="dropdownMenu">
-            <ul>
-                <li>Profile</li>
-                <li>Settings</li>
-                <li>Logout</li>
-            </ul>
-        </div>
-    </header>
+    <?php include 'include/header.php'; ?>
 
     <!-- Sidebar Menu -->
-    <aside class="sidebar">
-        <ul>
-            <li class="menu-item" id="dashboardMenu">Dashboard</li>
-            <li class="menu-item" id="servicesMenu">Servizi</li>
-            <li class="submenu" id="servicesSubmenu">
-            	<ul class="submenu-item" id="submenuServiceItem">Servizi</ul>
-            	<ul class="submenu-item" id="submenuTypeItem">Tipi Servizi</ul>
-            	<ul class="submenu-item" id="submenuMatrixItem">Schedulazione</ul>
-            </li>
-            <li class="menu-item" id="peopleMenu">Persone</li>
-			<li class="submenu" id="peopleSubmenu">
-				<ul class="submenu-item" id="submenuPeopleItem">Persone</ul>
-                <ul class="submenu-item" id="submenuRoleItem">Ruoli</ul>
-            </li>
-        </ul>
-    </aside>
+    <?php include 'include/sidebar.php'; ?>
 
     <!-- Main Content Area -->
     <div class="main-container">
@@ -72,11 +37,8 @@ error_reporting(E_ALL);
 	    </main>
 
 	    <!-- Footer -->
-	    <footer class="footer">
-	        <div class="container">
-			    <p>&copy; <?php echo date('Y'); ?> Your Name. All rights reserved.</p>
-		    </div>
-	    </footer>
+        <?php include 'include/footer.php'; ?>
+
     </div>
 
 

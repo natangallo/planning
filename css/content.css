@@ -183,3 +183,407 @@ ul li {
         .edit-btn i {
             font-size: 14px;
         }
+        
+/* CSS Specifico per Persone */        
+
+#add-person-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1f1f1f; /* Slightly lighter background */
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Form Header */
+.add-person-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#add-person-btn-cancel, #add-person-btn-save {
+    background-color: #f06565; /* Red for cancel */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#add-person-btn-save {
+    background-color: #f06545; /* Save button with different shade */
+}
+
+#add-person-btn-cancel:hover, #add-person-btn-save:hover {
+    opacity: 0.8;
+}
+
+/* User Avatar Section */
+#add-person-avatar-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#add-person-avatar {
+/*    background-color: #3a3a3a;*/
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-person-avatar-png {
+    height: auto;
+    width: 50%;
+}
+
+/* Input Groups */
+.add-person-input-group {
+    margin-bottom: 15px;
+}
+
+.add-person-input-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.add-person-input-group input,
+.add-person-input-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.add-person-input-group input::placeholder {
+    color: #aaa;
+}
+
+/* Tabs Section */
+.add-person-tabs-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #555;
+}
+
+.add-person-tab-item a {
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+}
+
+.add-person-tab-item a:hover {
+    background-color: #444;
+}
+
+.add-person-tabs-content {
+    margin-top: 20px;
+}
+
+.add-person-tab-pane {
+    display: none;
+}
+
+.add-person-tab-pane.active {
+    display: block;
+}
+
+/* Roles Section */
+#add-person-roles-section {
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.add-person-edit-roles-btn {
+    background-color: #f06545;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.add-person-edit-roles-btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .add-person-form-header {
+        flex-direction: column;
+    }
+
+    #add-person-btn-cancel, #add-person-btn-save {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Sezione Elenco Persone */
+.person-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Padding per dare spazio interno */
+    background-color: #444; /* Colore di sfondo */
+    border-radius: 5px; /* Angoli arrotondati */
+    margin-bottom: 10px; /* Spaziatura tra le righe */
+    transition: background-color 0.3s; /* Transizione per il colore di sfondo */
+}
+
+.person-container:hover {
+    background-color: #555; /* Colore di sfondo al passaggio del mouse */
+}
+
+.avatar {
+    width: 40px; /* Dimensione dell'avatar */
+    height: 40px; /* Dimensione dell'avatar */
+    border-radius: 50%; /* Rende l'immagine circolare */
+    margin-right: 10px; /* Spaziatura a destra dell'avatar */
+}
+
+.person-name {
+    flex: 1; /* Consente al nome di occupare lo spazio disponibile */
+    font-size: 14px; /* Dimensione del font per il nome */
+}
+
+.person-role {
+    text-align: center; /* Allineamento centrale per il ruolo */
+    font-size: 14px; /* Dimensione del font per il ruolo */
+    flex: 0 0 120px; /* Larghezza fissa per il ruolo */
+}
+
+.person-permission {
+    text-align: right; /* Allineamento a destra per i permessi */
+    font-size: 14px; /* Dimensione del font per i permessi */
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+a {
+    color: #ff6b57;
+    text-decoration: none;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for Roles Page */
+.roles-container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Header */
+.roles-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #555;
+    margin-bottom: 20px;
+}
+
+.back-to-people {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+/* Main Content */
+.roles-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Group List Section */
+.group-list {
+    width: 25%;
+    padding-right: 20px;
+}
+
+#group-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.group-button {
+    background-color: #444;
+    border: none;
+    padding: 10px;
+    color: white;
+    text-align: left;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.group-button.active {
+    background-color: #ff6b57;
+}
+
+.add-group-btn {
+    background-color: #666;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Role Details Section */
+.role-details {
+    width: 70%;
+}
+
+.role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #555;
+    margin-bottom: 20px;
+}
+
+#group-name {
+    font-size: 20px;
+}
+
+.edit-group-btn {
+    background: none;
+    border: none;
+    color: #ff6b57;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#roles-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.role-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.role-name {
+    margin-left: 10px;
+}
+
+.edit-role-btn {
+    background: none;
+    border: none;
+    color: #ff6b57;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-role-btn {
+    background-color: #666;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.delete-group-btn {
+    background-color: #ff6b57;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.group-button.selected {
+    background-color: #4CAF50; /* Cambia colore quando selezionato */
+    color: white;
+}
+
+        .person-search-container {
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .person-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: white;
+            border: 1px solid #ccc;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000;
+        }
+        .person-list li {
+            padding: 5px 10px;
+            cursor: pointer;
+            color: #333; /* Dark gray text color */
+        }
+        .person-list li:hover {
+            background-color: #f0f0f0;
+        }
+        .person-list li.disabled {
+            color: #999;
+            cursor: not-allowed;
+        }
+        .person-assignment {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            padding: 5px;
+            background-color: #f0f0f0;
+            border-radius: 3px;
+            color: #333; /* Dark gray text color */
+        }
+        .remove-person-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+        }

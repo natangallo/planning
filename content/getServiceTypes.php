@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 include '../include/db.php';
 
 $query = "SELECT * FROM service_types";
-$stmt = $pdo->prepare($query);
+$stmt = $conn->prepare($query);
 $stmt->execute();
 
 $serviceTypes = $stmt->fetchAll(PDO::FETCH_ASSOC);

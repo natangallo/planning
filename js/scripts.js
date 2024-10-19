@@ -1,5 +1,66 @@
-//scripts.js
-document.addEventListener('DOMContentLoaded', function() {
+// File: scripts.js
+document.addEventListener('DOMContentLoaded', function scripts() {
+
+function loadRoles() {
+    const mainContent = document.querySelector('.content');
+
+    // Effettua la richiesta per ottenere il contenuto di roles.php
+    fetch('roles/roles.php')
+        .then(response => response.text())
+        .then(data => {
+            // Inserisce il contenuto nella pagina
+            mainContent.innerHTML = data;
+
+            // Dopo aver inserito il contenuto, carica manualmente il file roles.js
+            loadScript('js/roles.js', () => {
+                // Inizializza i popup e gli eventi solo dopo il caricamento di roles.js
+                console.log('roles.js caricato con successo');
+                
+                // Verifica se le funzioni sono disponibili
+                if (typeof setupGroupPopup === 'function' && typeof setupRolePopup === 'function') {
+                    initializeRolePage();
+                } else {
+                    console.error('Le funzioni setupGroupPopup o setupRolePopup non sono state caricate correttamente.');
+                }
+            }, (error) => {
+                console.error('Errore nel caricamento di roles.js:', error);
+            });
+        })
+        .catch(error => console.error('Errore durante il caricamento dei ruoli:', error));
+}
+
+// Funzione per caricare dinamicamente un file JavaScript con gestione degli errori
+function loadScript(url, callback, errorCallback) {
+    const script = document.createElement('script');
+    script.src = url;
+    script.onload = callback;  // Quando il file è caricato, esegue la callback
+    script.onerror = errorCallback;  // In caso di errore, esegue la errorCallback
+    document.body.appendChild(script);
+}
+
+// Funzione per inizializzare gli eventi sui pulsanti della pagina
+function initializeRolePage() {
+    const addGroupBtn = document.getElementById('add-group-btn');
+    const addRoleBtn = document.getElementById('add-role-btn');
+
+    if (addGroupBtn) {
+        setupGroupPopup();
+        console.log('add-group-btn trovato e popup configurato.');
+    } else {
+        console.log('add-group-btn non trovato.');
+    }
+
+    if (addRoleBtn) {
+        setupRolePopup();
+        console.log('add-role-btn trovato e popup configurato.');
+    } else {
+        console.log('add-role-btn non trovato.');
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//				CODICE GENERALE DI CARICAMENTO DEI MENU						//
+//////////////////////////////////////////////////////////////////////////////
     const menuButton = document.getElementById('menuButton');
     const dropdownMenu = document.getElementById('dropdownMenu');
 	const dashboardMenu = document.getElementById('dashboardMenu');
@@ -40,6 +101,12 @@ document.addEventListener('DOMContentLoaded', function() {
         case 'people':
             loadPeople();
             displayPeople();
+            break;
+        case 'roles':
+            loadRoles();
+            displayPeople();
+        	removeActiveSubClass ();
+		    submenuRoleItem.classList.add('active');
             break;
         case 'settings':
             loadSettings(); // Placeholder function for other section
@@ -175,8 +242,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	submenuRoleItem.addEventListener('click', function() {
     	submenuPeopleItem.classList.remove('active');
 	    submenuRoleItem.classList.add('active');
+	    loadRoles();
+	    saveLastVisitedSection('roles');
 	});
-
 
 
 });

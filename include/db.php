@@ -5,18 +5,18 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$host = 'localhost';  // Nome del server MySQL
-$db   = 'planner';  // Nome del database
-$user = 'root';  // Nome utente MySQL
-$pass = 'root';  // Password MySQL
-$charset = 'utf8mb4';  // Set di caratteri da utilizzare
+$servername = 'mysql';  // Nome del server MySQL
+$dbname   = 'planner';  // Nome del database
+$username = 'planner_db';  // Nome utente MySQL
+$password = 'nupzyn-vuppaj-rEkfu6';  // Password MySQL
+// $charset = 'utf8mb4';  // Set di caratteri da utilizzare
 
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=$charset", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // Creazione della connessione
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
+    // Imposta il modo di gestione degli errori
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    echo json_encode(['success' => false, 'message' => $e->getMessage()]);
-    exit;
+    die("Connection failed: " . $e->getMessage());
 }
 ?>
